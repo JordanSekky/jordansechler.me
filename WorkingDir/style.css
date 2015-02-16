@@ -1,4 +1,14 @@
 @charset "utf-8";
+a:link {
+	text-decoration: none;
+	color: inherit;
+	font-style: italic;
+}
+a:visited {
+	text-decoration: none;
+	color: inherit;
+	font-style: italic;
+}
 #outer-wrapper {
 	padding-left: 0px;
 	padding-top: 0px;
@@ -13,35 +23,33 @@
 	border-radius: 4px;
 	-webkit-box-shadow: 6px 7px 13px rgba(0,0,0,0.19);
 	box-shadow: 6px 7px 13px rgba(0,0,0,0.19);
-	padding-left: 0px;
 	background-color: rgba(255,255,255,1.00);
 	margin-top: 0px;
+	margin-bottom: 0px;
 }
 #header {
 	color: #ffffff;
 	font-size: 100px;
 	font-weight: 700;
-	height: 340px;
-	margin-bottom: 0px;
+	height: 330px;
 }
 #header-text {
 	width: 702px;
 	height: 69px;
 	font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
-	color: #000;
+	color: #FFFFFF;
 	font-size: 100px;
-	font-weight: 700;
+	font-weight: normal;
 	position: relative;
 	text-align: center;
 	margin-left: auto;
 	margin-right: auto;
 	top: -347px;
-	-webkit-text-fill-color: white;
-	-webkit-text-stroke-width: 0.5px;
 }
 body {
 	font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
 	font-size: 18px;
+	margin: 0;
 	background-color: rgba(206,206,206,1.00);
 }
 .post-title {
@@ -55,13 +63,12 @@ body {
 	margin-right: 13px;
 	margin-top: 13px;
 	margin-left: 13px;
-	padding-bottom: 16px;
 	margin-bottom: 13px;
 
 
 }
 .post-image {
-	width: 50%;
+	width: 40%;
 	float: left;
 	padding-right: 13px;
 	margin-left: 0px;
@@ -71,4 +78,54 @@ body {
 }
 #header-image {
 
+
+
+}
+.post-text {
+	text-indent: 50px;
+
+}
+.post-info {
+	color: rgba(77,77,77,1.00);
+	border-radius: 9px / 10px;
+	font-style: italic;
+	font-size: small;
+	padding-right: 10px;
+	text-align: right;
+
+
+
+
+}
+.edit-link {
+	text-align: left;
+	float: left;
+	color: rgba(0,0,0,1.00);
+
+
+
+
+
+}
+.nav-bar {
+	background-color: rgba(255,255,255,1.00);
+	color: rgba(255,255,255,1.00);
+	font-size: small;
+	margin-bottom: 11px;
+	-webkit-box-shadow: 0px 2px 8px rgba(0,0,0,1.00);
+	box-shadow: 0px 2px 8px rgba(0,0,0,1.00);
+	text-align: right;
+	padding-right: 11px;
+	padding-bottom: 2px;
+	width: auto;
+	float: right;
+	padding-left: 11px;
+}
+.footer {
+	font-size: small;
+	background-color: rgba(0,0,0,1.00);
+	color: rgba(255,255,255,1.00);
+	padding-bottom: 2px;
+	padding-top: 2px;
+	padding-left: 13px;
 }
