@@ -13,12 +13,12 @@ Graduation Project: A ruby on rails blog.
 | 2015-02-13 | Added editing and deleting of blog posts to the blog.                                                             | 1h         |
 | 2015-02-15 | Created early design for the blog in dreamweaver.                                                                 | 2h         |
 | 2015-02-16 | Improved design of the blog, added edit and login links.                                                          | 2h         |
+| 2015-02-19 | Began merging the blog functionality with the design.                                                             | 1h         |
 |            |                                                                                                                   |            |
 |            |                                                                                                                   |            |
 |            |                                                                                                                   |            |
 |            |                                                                                                                   |            |
 |            |                                                                                                                   |            |
 |            |                                                                                                                   |            |
-|            |                                                                                                                   |            |
-|            |                                                                                                                   | Tot: 20.5  |
+|            |                                                                                                                   | Tot: 21.5  |
 
