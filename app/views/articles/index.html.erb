@@ -1,6 +1,6 @@
     <%# <%= current_user.full_name %1> %>
 <%# <% end %1> %>
-<% @articles.each do |article| %>
+<% @articles.reverse_each do |article| %>
     <div class="post">
         <h2 class="post-title">
             <%= link_to(article_path(article)) do %>
@@ -8,9 +8,9 @@
             <% end %>
         </h2>
 
-        <img src="images/placeholder.jpg" class="post-image" />
+        <%# <img src="images/placeholder.jpg" class="post-image" /> %>
         <span class="post-text">
-            <%== article.body %>
+            <%= article.html.html_safe %>
         </span>
         <div class="post-info">
             <% if user_signed_in? %>

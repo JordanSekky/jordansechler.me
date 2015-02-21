@@ -5,12 +5,17 @@
 a:link {
 	text-decoration: none;
 	color: inherit;
-	font-style: italic;
+	font-style: inherit;
 }
 a:visited {
 	text-decoration: none;
 	color: inherit;
-	font-style: italic;
+	font-style: inherit;
+}
+em {
+    // text-decoration: bold;
+	font-style: normal;
+    font-weight: bold;
 }
 #outer-wrapper {
 	padding-left: 0px;
@@ -67,7 +72,6 @@ body {
 	margin-top: 13px;
 	margin-left: 13px;
 	margin-bottom: 13px;
-    min-height: 300px;
 
 
 }
@@ -86,8 +90,7 @@ body {
 
 }
 .post-text {
-	text-indent: 50px;
-    min-height: 300px;
+	// text-indent: 50px;
 
 }
 .post-info {
