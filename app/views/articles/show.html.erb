@@ -8,5 +8,10 @@
   <%= @article.body %>
 </p>
 
+<p>
+  <strong>Author:</strong>
+  <%= @article.author %>
+</p>
+
 <%= link_to 'Back', articles_path %> |
 <%= link_to 'Edit', edit_article_path(@article) %>

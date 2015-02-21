@@ -1,4 +1,5 @@
 class ArticlesController < ApplicationController
+    before_action :authenticate_user!, :except => [:show, :index]
     def new
         @article = Article.new()
     end
@@ -44,6 +45,6 @@ class ArticlesController < ApplicationController
 
     private
     def article_params
-        params.require(:article).permit(:title, :body)
+        params.require(:article).permit(:title, :body, :author)
     end
 end

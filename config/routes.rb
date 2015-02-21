@@ -5,13 +5,27 @@ Myapp::Application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-root to: 'welcome#index'
+root to: 'articles#index'
 
     resources :articles
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
-
-  # Example of named route that can be invoked with purchase_url(id: product.id)
+    devise_for :users, :skip => 'registration', controllers: { sessions: "users/sessions" }
+    devise_scope :user do
+        post "/users", :to => "users/registrations#create", :as => "user_registration"
+        get "/users/cancel", :to => "users/registrations#cancel", :as => "cancel_user_registration"
+        get "/users/edit", :to => "users/registrations#edit", :as => "edit_user_registration"
+        patch "/users", :to => "users/registrations#update", :as => nil
+        put "/users", :to => "users/registrations#update", :as => nil
+        delete "/users", :to => "users/registrations#destroy", :as => nil
+    end
+  # user_registration POST   /users(.:format)               devise/registrations#create
+  # cancel_user_registration GET    /users/cancel(.:format)        devise/registrations#cancel
+  # edit_user_registration GET    /users/edit(.:format)          devise/registrations#edit
+  #                        PATCH  /users(.:format)               devise/registrations#update
+  #                        PUT    /users(.:format)               devise/registrations#update
+  #                        DELETE /users(.:format)               devise/registrations#destroy
+# Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
 
   # Example resource route (maps HTTP verbs to controller actions automatically):

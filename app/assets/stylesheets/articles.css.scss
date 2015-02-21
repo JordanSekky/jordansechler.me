@@ -67,6 +67,7 @@ body {
 	margin-top: 13px;
 	margin-left: 13px;
 	margin-bottom: 13px;
+    min-height: 300px;
 
 
 }
@@ -80,12 +81,13 @@ body {
 	padding-left: 13px;
 }
 #header-image {
-
+    width: 720px;
 
 
 }
 .post-text {
 	text-indent: 50px;
+    min-height: 300px;
 
 }
 .post-info {

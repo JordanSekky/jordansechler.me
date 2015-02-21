@@ -1,18 +1,30 @@
+    <%# <%= current_user.full_name %1> %>
+<%# <% end %1> %>
+<% @articles.each do |article| %>
+    <div class="post">
+        <h2 class="post-title">
+            <%= link_to(article_path(article)) do %>
+                <%= article.title %>
+            <% end %>
+        </h2>
 
-<div class="post">
-    <h2 class="post-title">Post Title</h2>
-    <img src="cats-cute-cat-animal-cute-grass-photo.jpg" class="post-image" />
-    <span class="post-text">
-        <p>Bacon ipsum dolor amet drumstick flank hamburger ball tip. Pancetta ground round chicken, tenderloin pork chop shankle frankfurter. Tongue short ribs doner meatball. Porchetta bresaola hamburger brisket tail tenderloin strip steak kielbasa, shank spare ribs corned beef venison meatball swine.</p>
-        <p>Rump corned beef beef ribs pork chop boudin filet mignon jerky chuck bacon ham pork loin pancetta venison shank pork. Alcatra meatloaf landjaeger pig prosciutto, brisket kevin rump turducken ground round. Capicola beef frankfurter, boudin cow porchetta salami. Turkey jowl rump, pastrami cupim tail sausage short loin drumstick. Doner pastrami bresaola, jerky brisket pork chop chicken salami drumstick flank andouille pork loin alcatra strip steak meatloaf.</p>
-    </span>
-    <div class="post-info">
-        <span class="edit-link">
-            <a href="#">Edit</a>
+        <img src="images/placeholder.jpg" class="post-image" />
+        <span class="post-text">
+            <%== article.body %>
         </span>
-        <span class="timestamp">
-            Posted January 1st, 2015 at 6pm GMT by Author McAuthorson
-        </span>
-    </div>
-    </div>
+        <div class="post-info">
+            <% if user_signed_in? %>
+                <span class="edit-link">
+                    <%= link_to 'Edit', edit_article_path(article) %>
+                    <%= link_to 'Delete', article_path(article),
+                        method: :delete,
+                        data: { confirm: 'Are you sure?' } %>
+                </span>
+            <% end %>
+            <span class="timestamp">
+                Posted <%= time_ago_in_words(article.created_at) %> by <%= article.author %>
+            </span>
+        </div>
+        </div>
+<% end %>
 
