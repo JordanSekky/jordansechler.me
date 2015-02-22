@@ -1,17 +1,38 @@
-<p>
-  <strong>Title:</strong>
-  <%= @article.title %>
-</p>
+<%# <p> %>
+<%#   <strong>Title:</strong> %>
+<%#   <%= @article.title %1> %>
+<%# </p> %>
  
-<p>
-  <strong>Text:</strong>
-  <%= @article.body %>
-</p>
+<%# <p> %>
+<%#   <strong>Text:</strong> %>
+<%#   <%= @article.body %1> %>
+<%# </p> %>
 
-<p>
-  <strong>Author:</strong>
-  <%= @article.author %>
-</p>
+<%# <p> %>
+<%#   <strong>Author:</strong> %>
+<%#   <%= @article.author %1> %>
+<%# </p> %>
+<div class="post">
+        <span class="post-title">
+                <%= @article.title %>
+        </span>
 
-<%= link_to 'Back', articles_path %> |
-<%= link_to 'Edit', edit_article_path(@article) %>
+        <span class="post-text">
+            <%= @article.source.html_safe %>
+        </span>
+        <div class="post-info">
+            <% if user_signed_in? %>
+                <span class="edit-link">
+                    <%= link_to 'Edit', edit_article_path(@article) %>
+                    <%= link_to 'Delete', article_path(@article),
+                        method: :delete,
+                        data: { confirm: 'Are you sure?' } %>
+                </span>
+            <% end %>
+            <span class="timestamp">
+                Posted <%= time_ago_in_words(@article.created_at) %> by <%= @article.author %>
+            </span>
+        </div>
+        </div>
+
+<%= link_to 'Back', articles_path %>

@@ -36,6 +36,8 @@ gem 'devise'
 
 gem 'redcarpet'
 
+gem 'truncato'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 

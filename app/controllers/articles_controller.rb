@@ -14,7 +14,7 @@ class ArticlesController < ApplicationController
 
     def create
         @article = Article.new(article_params)
-        @article.html = Redcarpet::Markdown.new(Redcarpet::Render::XHTML, hard_wrap: true).render(@article.body)
+        @article.source = Redcarpet::Markdown.new(Redcarpet::Render::XHTML, hard_wrap: true).render(params[:article][:body])
         
         if @article.save
             redirect_to @article
@@ -29,7 +29,7 @@ class ArticlesController < ApplicationController
 
     def update
         @article = Article.find(params[:id])
-        @article.html = Redcarpet::Markdown.new(Redcarpet::Render::XHTML, hard_wrap: true).render(@article.body)
+        @article.source = Redcarpet::Markdown.new(Redcarpet::Render::XHTML, hard_wrap: true).render(params[:article][:body])
 
         if @article.update(article_params)
             redirect_to @article

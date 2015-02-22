@@ -1,16 +1,38 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>DigitalOcean Rails Application</title>
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <title>Jordan Sechler's Blog</title>
+  <%= stylesheet_link_tag    "articles", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-<p class="notice"><%= notice %></p>
-<p class="alert"><%= alert %></p>
+	<div id="outer-wrapper">
+	<div id="inner-wrapper">
+    	
+    	<div id="header">
+        <%= image_tag "header.jpg", alt: "", id: "header-image"  %>
+        </div>
+        <div id="content">
+            <p class="notice"><%= notice %></p>
+            <p class="alert"><%= alert %></p>
+            <%= yield %>
+        </div>
+        <div class="footer">
+            <% if not user_signed_in? %>
+                <%= link_to 'Sign In', new_user_session_path %>
+            <% else %>
+            <%= link_to 'Sign Out', destroy_user_session_path,
+                method: :delete,
+                data: { confirm: 'Are you sure?' } %>
+             | 
+            <%= link_to 'New article', new_article_path %>
+             | 
+            <%= link_to 'Edit Profile', edit_user_registration_path %>
+            <% end %>
+        </div>
 
-<%= yield %>
+
 
 </body>
 </html>

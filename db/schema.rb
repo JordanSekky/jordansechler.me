@@ -16,11 +16,11 @@ ActiveRecord::Schema.define(version: 20150221073936) do
   create_table "articles", force: true do |t|
     t.string   "title"
     t.text     "body"
+    t.text     "source"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "email"
     t.string   "author"
-    t.string   "html"
   end
 
   create_table "users", force: true do |t|
