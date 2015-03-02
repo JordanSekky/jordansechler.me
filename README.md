@@ -17,7 +17,7 @@ Graduation Project: A ruby on rails blog.
 | 2015-02-20 | Began work on user authentication for the blog.                                                                   | 2h         |
 | 2015-02-21 | Finished user aunthentication. Everything fully functional.                                                       | 2h         |
 | 2015-02-21 | Added support for markdown in the post text box.                                                                  | 1h         |
-| 2015-02-21 | Repared markdown issues, cleaned up the look of the blog overall.                                                 | 3h         |
+| 2015-02-21 | Repaired markdown issues, cleaned up the look of the blog overall.                                                | 3h         |
 |            |                                                                                                                   |            |
 |            |                                                                                                                   |            |
 |            |                                                                                                                   | Tot: 29.5  |
