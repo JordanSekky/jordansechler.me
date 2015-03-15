@@ -22,8 +22,8 @@ root to: 'articles#index'
         post "/users", :to => "users/registrations#create", :as => :user_registration
         get "/users/cancel", :to => "users/registrations#cancel", :as => :cancel_user_registration
         get "/users/edit", :to => "users/registrations#edit", :as => :edit_user_registration
-        patch "/users", :to => "users/registrations#update", :as => nil
-        put "/users", :to => "users/registrations#update", :as => nil
+        patch "/users/edit", :to => "users/registrations#update", :as => nil
+        put "/users/edit", :to => "users/registrations#update", :as => nil
         delete "/users", :to => "users/registrations#destroy", :as => nil
     end
   # Example of named route that can be invoked with purchase_url(id: product.id)
